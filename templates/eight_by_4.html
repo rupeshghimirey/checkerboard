@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/my_style.css') }}">
+    <title>Checkerboard</title>
+
+</head>
+<body>
+    <div class="container">
+        <h2>***Checkerboard***</h2>
+        <!-- vertical 2 * y -->
+        {% for y in range(0,xValue//2) %}
+        <div class="first-row">
+            {% for x in range(0,xValue)%}
+            <div class="horizontal-box">
+                
+            </div>
+            <div class="vertical-box">
+                
+            </div>
+            {%endfor%}
+        </div>
+        <div class="second-row">
+            {% for x in range(0,xValue)%}
+            <div class="vertical-box">
+                
+            </div>
+            <div class="horizontal-box">
+                
+            </div>
+            {%endfor%}
+        </div>
+        {%endfor%}
+    </div>
+</body>
+</html>
